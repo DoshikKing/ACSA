@@ -33,6 +33,7 @@ class ServerLogic extends Thread {
                 new Sender(Server.messageStory, out).start();
                 while (true) {
                     word = in.readLine();
+                    System.out.println(word);
                     if(word.equals("stop")) {
                         for (ServerLogic vr : Server.serverList) {
                             Server.messageStory.printStory(vr.out);
